@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="brf1.png" type="image/png">
+    <title>Sorteio de Cupons</title>
+</head>
+
+<body>
+    <img id="logo" src="experiencia.png" alt="Logo">
+
+    <div class="container">
+        <header>
+            <h1>Sorteio de Cupons</h1>
+        </header>
+        <main>
+
+            <!-- Seção de tipo de sorteio -->
+            <div id="tipo-sorteio-section" class="sorteio-section">
+                <button class="sortearGrupo" onclick="exibirSorteio('grupo')">Sorteio do Grupo</button>
+                <button class="sorteioFornecedor" onclick="exibirSorteio('fornecedor')">Sorteio do Fornecedor</button>
+            </div>
+
+            <!-- Seção de sorteio de grupo -->
+            <div id="sorteio-grupo-section" class="sorteio-section hidden">
+                <button onclick="sorteioGrupo()">Sortear</button>
+            </div>
+
+            <!-- Seção de sorteio de fornecedor -->
+            <div id="sorteio-fornecedor-section" class="sorteio-section hidden">
+                <label for="fornecedor">Escolha um fornecedor:</label>
+                <select id="fornecedor"></select>
+                <button onclick="sorteioFornecedor()">Sortear</button>
+            </div>
+
+            <!-- Seção para exibir o resultado -->
+            <div id="resultado"></div>
+        </main>
+    </div>
+    
+<!-- Botão de voltar -->
+<button id="voltar-button" class="voltar-button hidden" onclick="voltar()">Voltar</button>
+
+<!-- Botão para exibir ganhadores do Sorteio Grupo BRF1 -->
+<button id="ganhadores-button" class="ganhadores-button" onclick="exibirGanhadoresSorteioGrupo()">Ver Ganhadores do Grupo BRF1</button>
+
+<!-- Seção para exibir ganhadores do Sorteio Fornecedor -->
+<div style="position: fixed; bottom: 60px; left: 10px;">
+    <button id="ganhadores-fornecedor-button" onclick="exibirGanhadoresSorteioFornecedor()">Ver Ganhadores do Fornecedor</button>
+    <select id="fornecedor-ganhadores"></select>
+</div>
+
+<!-- Incluir o arquivo JavaScript -->
+<script src="main.js"></script>
+
+<!-- Chamada da função principal ao carregar o documento -->
+<script>
+    document.addEventListener('DOMContentLoaded', main);
+</script>
+
+</body>
+
+</html>
