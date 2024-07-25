@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --cor-principal: #011a3f;
+  --cor-form: #ff6b6b;
+  --cor-buttom: #00cdac;
+  --cor-white: #f2f2f2;
+  --cor-verdeganhadores: #4caf50;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 160px;
+  height: auto;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.container {
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--cor-principal);
+  color: var(--cor-white);
+  padding: 20px 0;
+}
+
+main {
+  padding: 30px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--cor-principal);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-buttom);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.sorteio-section {
+  margin-bottom: 40px;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+}
+
+table.table-bordered {
+  background-color: var(--cor-white);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+table.table-bordered th,
+table.table-bordered td {
+  padding: 15px;
+  text-align: center;
+  border: none;
+}
+
+table.table-bordered th {
+  background-color: var(--cor-principal);
+  color: var(--cor-white);
+  text-transform: uppercase;
+}
+
+table.table-bordered tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.table-bordered tr:hover {
+  background-color: #e9e9e9;
+  transition: background-color 0.3s ease;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    color: var(--cor-principal);
+  }
+  50% {
+    transform: scale(1.05);
+    color: var(--cor-secundaria);
+  }
+}
+
+.contagem-regressiva {
+  font-weight: bold;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.contagem-regressiva span {
+  font-size: 5em;
+  display: inline-block;
+}
+
+@keyframes winnerReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ganhador-info {
+  background-color: var(--cor-white);
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 100%;
+  animation: winnerReveal 1s ease-out;
+}
+
+.ganhador-info td,
+.ganhador-info th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.ganhador-info th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4caf50;
+  color: black;
+}
+
+.ganhador-info tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.ganhadores-button {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.voltar-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #999;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.voltar-button:hover {
+  background-color: #888;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cupom-container {
+  background: linear-gradient(135deg, #fcf8e8 10%, #f2f2f2 90%);
+  border: 4px dashed var(--cor-principal);
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 20px;
+  max-width: 45vw;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.cupom-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 32px;
+  color: var(--cor-principal);
+  border-bottom: 3px solid var(--cor-principal);
+  padding-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cupom-field {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.cupom-label {
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.cupom-value {
+  color: var(--cor-principal);
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cupom-container::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fcf8e8;
+}
+
+#sorteio-fornecedor-section {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#fornecedor {
+  font-size: 1.5rem;
+}
+
+#resultado.contagem-regressiva {
+  font-size: 1.5rem;
+}

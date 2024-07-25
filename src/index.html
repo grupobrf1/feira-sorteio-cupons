@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiência BRF1 - Entrar</title>
+    <link rel="icon" type="image/x-icon" href="../public/brf1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .field-icon {
+        position: absolute;
+        right: 10px;
+        top: 70%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+      }
+      .position-relative {
+        position: relative;
+      }
+      .is-invalid {
+        border-color: red;
+        animation: shake 0.5s;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-4px);
+        }
+        50% {
+          transform: translateX(4px);
+        }
+        75% {
+          transform: translateX(-4px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-md">
+      <form id="loginForm" class="mt-5" autocomplete="off">
+        <h2>Entrar</h2>
+        <div
+          id="loginErrorAlert"
+          class="alert alert-danger d-none"
+          role="alert"
+        >
+          Usuário ou senha inválidos. Por favor, tente novamente.
+        </div>
+        <div class="form-group">
+          <label for="username">Usuário:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group position-relative">
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            required
+            autocomplete="off"
+          />
+          <img src="icons/eye.svg" class="field-icon" id="togglePasswordIcon" />
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1317.0.min.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
