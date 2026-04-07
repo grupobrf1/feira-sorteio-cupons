@@ -41,13 +41,7 @@ Frontend web em Vite com sorteios por grupo, por fornecedor e de carro, além de
 
 ## Como executar ou acessar
 
-```bash
-cd /Users/lucas/Projetos/feira-sorteio-cupons
-npm install
-npm run dev
-```
-
-Build:
+Build de produção:
 
 ```bash
 npm run build
