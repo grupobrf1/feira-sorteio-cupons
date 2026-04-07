@@ -39,7 +39,7 @@ Frontend web em Vite com sorteios por grupo, por fornecedor e de carro, além de
 - HTML/CSS
 - Bootstrap
 
-## Como executar ou acessar
+## Como executar
 
 Build de produção:
 
